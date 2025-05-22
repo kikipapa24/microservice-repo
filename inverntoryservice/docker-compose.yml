@@ -1,0 +1,9 @@
+services:
+  mysql_inventory:
+    container_name: mysql_inventory  # This avoids the "/mysql" name conflict
+    image: mysql:8.0.36
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: inventoryservice
+    ports:
+      - "3308:3306"
